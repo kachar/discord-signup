@@ -1,0 +1,22 @@
+// Settings
+
+@import '../_variables';
+@import '../_mixins';
+@import '../_icons';
+
+// Global elements
+
+@import '../elements/_partials/_globals';
+@import '../elements/_partials/cookie-consent';
+@import '../elements/_partials/page-header';
+@import '../elements/_partials/page-footer';
+
+// Vendor source styles
+
+// Vendor custom styles
+
+// Page specified sections
+
+@import '../elements/homepage/welcome';
+
+// Unused styles

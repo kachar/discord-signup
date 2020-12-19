@@ -1,0 +1,30 @@
+// @include screen-desktop {}
+
+@include screen-tablet {
+    .welcome {
+        .rows {
+            flex-direction: column;
+            padding: 0 0 20px 0;
+
+            &:last-of-type {
+                padding: 0;
+
+                .row {
+                    padding: 0 0 15px 0;
+                }
+            }
+
+            .row {
+                &:first-child {
+                    width: auto;
+                }
+
+                &:last-child {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+// @include screen-mobile {}

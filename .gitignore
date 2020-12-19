@@ -1,0 +1,13 @@
+.env
+.idea
+npm-debug.log
+package-lock.json
+/public/.idea
+/public/front
+/public/back
+/public/storage
+/public/mix-manifest.json
+/vendor
+/node_modules
+/storage/*.key
+/storage/debugbar

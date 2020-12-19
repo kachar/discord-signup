@@ -1,0 +1,118 @@
+// Screen media queries
+
+@mixin screen-desktop {
+    @media only screen and (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin screen-tablet {
+    @media only screen and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin screen-mobile {
+    @media only screen and (max-width: 640px) {
+        @content;
+    }
+}
+
+@mixin screen-custom($bp) {
+    @media only screen and (max-width: $bp) {
+        @content;
+    }
+}
+
+// Calculate view width for different resolutions
+
+@function desktop($target) {
+    $vw-context: (1280 * 0.01) * 1px;
+
+    @return ($target / $vw-context) * 1vw;
+}
+
+@function tablet($target) {
+    $vw-context: (1024 * 0.01) * 1px;
+
+    @return ($target / $vw-context) * 1vw;
+}
+
+@function mobile($target) {
+    $vw-context: (640 * 0.01) * 1px;
+
+    @return ($target / $vw-context) * 1vw;
+}
+
+@function custom($target, $size) {
+    $vw-context: ($size * 0.01) * 1px;
+
+    @return ($target / $vw-context) * 1vw;
+}
+
+// Placeholders
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin placeholder-focus {
+    &:focus::-webkit-input-placeholder {
+        @content;
+    }
+
+    &:focus:-moz-placeholder {
+        @content;
+    }
+
+    &:focus::-moz-placeholder {
+        @content;
+    }
+
+    &:focus:-ms-input-placeholder {
+        @content;
+    }
+}
+
+// Rem for font-size
+
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+
+    @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+// Custom font for icons
+
+@mixin icon {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

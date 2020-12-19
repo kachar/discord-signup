@@ -1,0 +1,139 @@
+html,
+body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-color: $page-bg;
+}
+
+body {
+    @include font-size(16px);
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+*,
+a,
+button,
+input,
+textarea {
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+button,
+input,
+textarea {
+    color: $black;
+    font-family: $font-roboto;
+    font-weight: 400;
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+button,
+input[type='submit'] {
+    cursor: pointer;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+    margin: 0;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+dl,
+dt,
+dd {
+    margin: 0;
+}
+
+main {
+    overflow: hidden;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    @include icon;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($black, 0.2);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0s, opacity 500ms;
+    z-index: -1;
+
+    &.active {
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 500ms;
+        z-index: 9;
+    }
+}
+
+@import 'responsive/_globals';

@@ -1,0 +1,11 @@
+// @include screen-desktop {}
+
+// @include screen-tablet {}
+
+@include screen-mobile {
+    .alert {
+        font-size: mobile(16px);
+        padding: mobile(20px);
+        margin: 0 0 mobile(40px) 0;
+    }
+}

@@ -1,0 +1,53 @@
+.welcome {
+    padding: 30px 0;
+
+    h1,
+    p {
+        line-height: 1.2;
+    }
+
+    h1 {
+        @include font-size(22px);
+    }
+
+    p {
+        @include font-size(16px);
+
+        padding: 15px 0 0 0;
+
+        &+h1 {
+            padding: 30px 0 0 0;
+        }
+    }
+
+    .data {
+        margin: 30px 0 0 0;
+        padding: 30px;
+        background-color: $header-bg;
+    }
+
+    .rows {
+        display: flex;
+
+        &:last-of-type {
+            .row {
+                padding: 0;
+            }
+        }
+
+        .row {
+            padding: 0 0 15px 0;
+            line-height: 1.4;
+
+            &:first-child {
+                width: 500px;
+            }
+
+            &:last-child {
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+@import 'responsive/welcome';

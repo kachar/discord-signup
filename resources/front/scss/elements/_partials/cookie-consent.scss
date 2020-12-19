@@ -1,0 +1,88 @@
+.cookie-consent {
+    position: fixed;
+    right: 20px;
+    bottom: -400px;
+    z-index: 100;
+    background-color: $cookie-consent-text-bg;
+    box-shadow: 0 0 10px 0 rgba($black, 0.2);
+    padding: 25px;
+    width: 300px;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 500ms, bottom 500ms;
+
+    &.show {
+        bottom: 20px;
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s linear 0s, opacity 500ms, bottom 500ms;
+    }
+
+    .close {
+        position: absolute;
+        right: 15px;
+        top: -13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        background-color: $white;
+        border-radius: 3px;
+
+        i {
+            @include font-size(25px);
+
+            color: $cookie-consent-close;
+            display: block;
+
+            &:hover {
+                color: $cookie-consent-close-hover;
+            }
+        }
+    }
+
+    .wrapper {
+        p {
+            @include font-size(16px);
+
+            color: $cookie-consent-text;
+            line-height: 1.6;
+            display: block;
+        }
+
+        a {
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 40px;
+            margin: 20px 0 0 0;
+            background-color: $cookie-consent-accept-bg;
+            border-radius: 2px;
+
+            span {
+                @include font-size(14px);
+
+                color: $cookie-consent-accept;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                background-color: $cookie-consent-accept-bg-hover;
+            }
+        }
+    }
+}
+
+@import 'responsive/cookie-consent';

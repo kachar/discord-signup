@@ -1,0 +1,15 @@
+// @include screen-desktop {}
+
+// @include screen-tablet {}
+
+@include screen-mobile {
+    .page-header {
+        .user {
+            .message {
+                span {
+                    white-space: pre-line;
+                }
+            }
+        }
+    }
+}

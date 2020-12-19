@@ -1,0 +1,10 @@
+// @include screen-desktop {}
+
+// @include screen-tablet {}
+
+@include screen-mobile {
+    .cookie-consent {
+        left: 20px;
+        width: auto;
+    }
+}

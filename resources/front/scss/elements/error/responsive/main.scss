@@ -1,0 +1,62 @@
+// @include screen-desktop {}
+
+@include screen-tablet {
+    .error {
+        padding: 0 60px;
+    }
+
+    .code {
+        &:before {
+            bottom: 75px;
+        }
+
+        p {
+            @include font-size(200px);
+
+            padding: 0 50px;
+        }
+    }
+}
+
+@include screen-mobile {
+    .error {
+        padding: 0 mobile(30px);
+    }
+
+    .brand {
+        .logo {
+            width: mobile(35px);
+        }
+
+        .name {
+            font-size: mobile(22px);
+            padding: 0 0 0 mobile(10px);
+        }
+    }
+
+    .code {
+        &:before {
+            bottom: mobile(46px);
+        }
+
+        p {
+            font-size: mobile(120px);
+            padding: 0 mobile(30px);
+        }
+    }
+
+    .message {
+        font-size: mobile(15px);
+        margin: mobile(30px) 0 0 0;
+    }
+
+    .button {
+        margin: mobile(80px) auto 0 auto;
+        width: mobile(320px);
+        height: mobile(60px);
+
+        span {
+            font-size: mobile(14px);
+        }
+    }
+}

@@ -1,0 +1,11 @@
+// @include screen-desktop {}
+
+// @include screen-tablet {}
+
+@include screen-mobile {
+    .button {
+        span {
+            font-size: mobile(14px);
+        }
+    }
+}

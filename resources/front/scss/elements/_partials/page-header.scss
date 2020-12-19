@@ -1,0 +1,205 @@
+.page-header {
+    background-color: $header-bg;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        margin: 0 10px 0 0;
+
+        a {
+            display: inline-flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            background-color: $brand-bg;
+            padding: 11px 12px;
+            border-radius: 3px;
+        }
+
+        .name,
+        .shortname {
+            @include font-size(18px);
+
+            color: $white;
+        }
+
+        .shortname {
+            display: none;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1 0 auto;
+    }
+
+    .menu,
+    .user {
+        display: flex;
+        align-items: center;
+
+        .button {
+            display: flex;
+
+            &.color-gray {
+                a {
+                    background-color: $button-gray;
+
+                    &:hover {
+                        background-color: $button-gray-hover;
+                    }
+                }
+            }
+
+            &.color-blue {
+                a {
+                    background-color: $button-blue;
+
+                    &:hover {
+                        background-color: $button-blue-hover;
+                    }
+                }
+            }
+
+            &.color-green {
+                a {
+                    background-color: $button-green;
+
+                    &:hover {
+                        background-color: $button-green-hover;
+                    }
+                }
+            }
+
+            &.color-red {
+                a {
+                    background-color: $button-red;
+
+                    &:hover {
+                        background-color: $button-red-hover;
+                    }
+                }
+            }
+
+            &.text {
+                a {
+                    width: auto;
+                    padding: 10px;
+                }
+
+                span {
+                    @include font-size(16px);
+
+                    color: $white;
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        @include font-size(22px);
+
+                        margin: 0 10px 0 0;
+                    }
+                }
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 3px;
+            }
+
+            i {
+                @include font-size(24px);
+
+                color: $white;
+            }
+        }
+
+        .separator {
+            display: flex;
+            width: 1px;
+            height: 20px;
+            margin: 0 15px;
+            position: relative;
+            background-color: $gray-2;
+        }
+    }
+
+    .menu {
+        .link {
+            display: flex;
+
+            &.active {
+                a {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+
+            a {
+                @include font-size(18px);
+
+                color: $blue-2;
+                padding: 11px 12px;
+                position: relative;
+
+                &:after {
+                    display: none;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 40%;
+                    height: 2px;
+                    border-radius: 3px;
+                    background-color: $orange;
+                }
+
+                &:hover {
+                    &:after {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .user {
+        &.logged {
+            li {
+                margin: 0 10px 0 0;
+            }
+        }
+
+        .message {
+            @include font-size(14px);
+
+            color: $gray-3;
+            text-transform: uppercase;
+
+            a {
+                font-weight: 500;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@import 'responsive/page-header';
